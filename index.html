@@ -18,7 +18,7 @@
 {{/each}}
 </script>
 <script type="text/javascript">
-var source   = $("#seminars-template").html();
+var source   = document.getElementById("seminars-template").innerHTML;
 var template = Handlebars.compile(source);
 var context={
   seminars:[
@@ -39,8 +39,8 @@ var context={
     },
   ]
 };
-var html=template(context);
-document.getElementById("seminars").innerHTML = html;
+var outputhtml=template(context);
+document.getElementById("seminars").innerHTML = outputhtml;
 </script>
 <script type="text/javascript">
 $(function() {
