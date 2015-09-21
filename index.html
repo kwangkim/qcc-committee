@@ -40,7 +40,7 @@ var context={
   ]
 };
 var html=template(context);
-$("#seminars").append(html);// inject the seminar html
+document.getElementById("seminars").innerHTML = html;
 </script>
 <script type="text/javascript">
 $(function() {
