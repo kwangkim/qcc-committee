@@ -44,6 +44,6 @@ var cond= function(e){
 };
 var activeindex=find_if(schedules.seminars,cond);
 if(activeindex===-1){activeindex=schedules.seminars.length-1;}
-console.log(activeindex);
+
 
 
