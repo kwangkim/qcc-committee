@@ -35,7 +35,8 @@ var find_if=function(arr, cond){
 };
 
 // Find the first day  which is equal or later than today. If it does not exist, the last day.
-var today=new Date();
+//var today=new Date();
+var today=new Date(2015,10,5);
 var cond= function(e){
   if(Date(e.year,e.month,e.day)>=today)){return true;}
   else{ return false;}
