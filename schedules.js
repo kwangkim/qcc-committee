@@ -42,7 +42,7 @@ var cond= function(e){
   if(datetime-today>=0){return true;}
   else{ return false;}
 };
-var activeindex=find_if(schedules.seminars,cond);
+var activeindex=find_if(schedules.seminars,cond); //Active index within jquery acoordian
 if(activeindex===-1){activeindex=schedules.seminars.length-1;}
 
 
