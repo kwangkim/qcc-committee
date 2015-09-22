@@ -18,9 +18,7 @@
 {{/each}}
 </script>
 <script type="text/javascript">
-var source   = document.getElementById("seminars-template").innerHTML;
-var template = Handlebars.compile(source);
-var context={
+var schedules={
   seminars:[
     {
       month:9, day:30, year :2015, speaker:" Dr. Donley, Robert", affiliation:"QCC",
@@ -42,7 +40,9 @@ var context={
 </script>
 <script type="text/javascript">
 $(function() {
-    document.getElementById("seminars").innerHTML = template(context);
+    var source   = document.getElementById("seminars-template").innerHTML;
+    var template = Handlebars.compile(source);
+    document.getElementById("seminars").innerHTML = template(schedule);
     $("#seminars").accordion(
     {
         collapsible: false,
