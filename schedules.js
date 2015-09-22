@@ -21,7 +21,7 @@ var schedules={
 // Find the active index
 //Sort
 var datecompare=function(e1,e2){
-  return Date(e1.year,e1.month,e1.day)-Date(e1.year,e1.month,e1.day);
+  return Date(e1.year,e1.month,e1.day).getTime()-Date(e1.year,e1.month,e1.day).getTime();
 };
 if(!sorted){
   schedules.seminars.sort(datecompare);  
@@ -35,10 +35,10 @@ var find_if=function(arr, cond){
 };
 
 // Find the first day  which is equal or later than today. If it does not exist, the last day.
-//var today=new Date();
-var today=new Date(2015,9,5);
+//var today=new Date.now();
+var today=new Date(2015,9,5).getTime();
 var cond= function(e){
-  if(Date(e.year,e.month,e.day)-today>=0){return true;}
+  if(Date(e.year,e.month,e.day).getTime()-today>=0){return true;}
   else{ return false;}
 };
 var activeindex=find_if(schedules.seminars,cond);
