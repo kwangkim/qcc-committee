@@ -38,7 +38,7 @@ var find_if=function(arr, cond){
 //var today=new Date();
 var today=new Date(2015,9,5);
 var cond= function(e){
-  if(Date(e.year,e.month,e.day)>=today){return true;}
+  if(Date(e.year,e.month,e.day)-today>=0){return true;}
   else{ return false;}
 };
 var activeindex=find_if(schedules.seminars,cond);
