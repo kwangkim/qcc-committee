@@ -34,7 +34,7 @@ var find_if=function(arr, cond){
   return -1; //if not return -1
 };
 
-// Find the first day  which is equal or later than today. If it does not exist, the last day.
+// Find the first day  which is equal or later than today. If it does not exist, choose the last day.
 var today=new Date.now();
 //var today=new Date(2015,11,5).getTime();
 var cond= function(e){
@@ -43,7 +43,7 @@ var cond= function(e){
   else{ return false;}
 };
 var activeindex=find_if(schedules.seminars,cond); //Active index within jquery acoordian
-if(activeindex===-1){activeindex=schedules.seminars.length-1;}
+if(activeindex===-1){activeindex=schedules.seminars.length-1;} //If it does not exist,  choose the last day.
 
 
 
