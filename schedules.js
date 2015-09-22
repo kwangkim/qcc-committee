@@ -38,7 +38,7 @@ var find_if=function(arr, cond){
 var today=Date.now();
 //var today=new Date(2015,11,5).getTime();
 var cond= function(e){
-  var datetime= Date(e.year,e.month,e.day).getTime();
+  var datetime= new Date(e.year,e.month,e.day).getTime();
   if(datetime-today>=0){return true;}
   else{ return false;}
 };
