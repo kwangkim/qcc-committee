@@ -36,7 +36,7 @@ var find_if=function(arr, cond){
 
 // Find the first day  which is equal or later than today. If it does not exist, the last day.
 //var today=new Date.now();
-var today=new Date(2015,9,5).getTime();
+var today=new Date(2015,10,5).getTime();
 var cond= function(e){
   var datetime= new Date(e.year,e.month,e.day).getTime();
   if(datetime-today>=0){return true;}
