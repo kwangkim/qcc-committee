@@ -1,3 +1,4 @@
+var sorted=true;// Sorted in an increasing order.
 var schedules={
   seminars:[
     {
@@ -17,3 +18,30 @@ var schedules={
     },
   ]
 };
+// Find the active index
+//Sort
+var datecompare=function(e1,e2){
+  return Date(e1.year,e1.month,e1.day)-Date(e1.year,e1.month,e1.day);
+};
+if(!sorted){
+  schedules.seminars.sort(datecompare);  
+}
+// find_if return the first index which satisfies the condition. Otherwise return -1
+var find_if=function(arr, cond){
+  for(var i=0;i<arr.length;i++){
+    if(typeof cond=== "function" && cond(arr[i])){ return i;}
+  }
+  return -1; //if not return -1
+};
+
+// Find the first day  which is equal or later than today. If it does not exist, the last day.
+var today=new Date();
+var cond= function(e){
+  if(Date(e.year,e.month,e.day)>=today)){return true;}
+  else{ return false;}
+};
+var activeindex=find_if(schedules.seminars,cond);
+if(activeindex===-1){activeindex=shcedule.seminars.length-1;}
+console.log(activeindex);
+
+
