@@ -39,10 +39,10 @@ var context={
     },
   ]
 };
-document.getElementById("seminars").innerHTML = template(context);
 </script>
 <script type="text/javascript">
 $(function() {
+    document.getElementById("seminars").innerHTML = template(context);
     $("#accordion").accordion(
     {
         collapsible: false,
