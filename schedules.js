@@ -35,10 +35,10 @@ var find_if=function(arr, cond){
 };
 
 // Find the first day  which is equal or later than today. If it does not exist, choose the last day.
-var today=new Date.now();
+var today=Date.now();
 //var today=new Date(2015,11,5).getTime();
 var cond= function(e){
-  var datetime= new Date(e.year,e.month,e.day).getTime();
+  var datetime= Date(e.year,e.month,e.day).getTime();
   if(datetime-today>=0){return true;}
   else{ return false;}
 };
