@@ -42,7 +42,7 @@ var cond= function(e){
   else{ return false;}
 };
 var activeindex=find_if(schedules.seminars,cond);
-if(activeindex===-1){activeindex=shcedules.seminars.length-1;}
+if(activeindex===-1){activeindex=schedules.seminars.length-1;}
 console.log(activeindex);
 
 
