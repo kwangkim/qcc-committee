@@ -42,7 +42,7 @@ var schedules={
 $(function() {
     var source   = document.getElementById("seminars-template").innerHTML;
     var template = Handlebars.compile(source);
-    document.getElementById("seminars").innerHTML = template(schedule);
+    document.getElementById("seminars").innerHTML = template(schedules);
     $("#seminars").accordion(
     {
         collapsible: false,
