@@ -23,13 +23,14 @@ $(function() {
     var source   = document.getElementById("seminars-template").innerHTML;
     var template = Handlebars.compile(source);
     document.getElementById("seminars").innerHTML = template(schedules);
+    //http://stackoverflow.com/a/2199732/5225593
     $("#seminars").accordion(
     {
         collapsible: false,
-        active: false,
         heightStyle: "content",
+        event: "mouseover"
     }
-    );
+    ).activate(activeindex);
 });
 </script>
 <h3 style="text-align: center;"><b>Professional Development in Mathematics and Computer Science</b></h3>
